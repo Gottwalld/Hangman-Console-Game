@@ -59,8 +59,9 @@ if user_action == '1':  # Если играем/новая игра
         for ind, letter in enumerate(Word_in_game):
             if letter.lower() == user_letter:       # Если угадал в цикле
                 Secret_word[ind] = letter
-                if letter.lower() in strike_letters:
-                    strike_letters[strike_letters.index(letter.lower())] = '*'
+                
+        if user_letter.lower() in strike_letters:
+            strike_letters[strike_letters.index(user_letter.lower())] = '*'
                     
         if Check_Secret == Secret_word and user_letter not in ''.join(Secret_word).lower():     # Если не угадал
             Counter_errors += 1
