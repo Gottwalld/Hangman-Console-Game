@@ -64,12 +64,11 @@ if user_action == '1':  # Если играем/новая игра
                     
         if Check_Secret == Secret_word and user_letter not in ''.join(Secret_word).lower():     # Если не угадал
             Counter_errors += 1
-            print(f'Вы ошиблись. Ошибки {Counter_errors}/7')
+            print('Вы ошиблись')
         else:
             print('ВЫ УГАДАЛИ БУКВУ')
-            print()
         Check_Secret.clear()
-                            
+        print(f'Ошибки {Counter_errors}/7')                    
         print('Оставшиеся буквы алфавита: ')
         print(*strike_letters)
         print('____________________________________________________________') 
